@@ -1,0 +1,17 @@
+---
+description: General Guidelines
+globs: *
+alwaysApply: false
+---
+# General Coding Guidelines
+- Use TypeScript for all development.
+- Prioritize readability and maintainability in all code.
+- Ensure function and variable names are clear and descriptive, following TypeScript/JavaScript naming conventions:
+  - Use `camelCase` for variables, functions, and parameters.
+  - Use `PascalCase` for React components, classes, and interfaces.
+  - Use `UPPER_CASE` for constants.
+- Use concise, meaningful comments for complex logic, following JSDoc style for public APIs and interfaces.
+- Avoid deeply nested code; prefer breaking logic into smaller, reusable functions or hooks.
+- Use `const` for variables that won't be reassigned to improve performance and clarity.
+- Ensure all code is type-safe by using TypeScript's strict mode and avoiding `any` types.
+- Use ESLint and Prettier to enforce consistent code formatting and catch potential errors.

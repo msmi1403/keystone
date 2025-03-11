@@ -1,0 +1,25 @@
+---
+description: Frontend Coding Standards
+globs: src/screens/*.tsx, src/components/*.tsx
+alwaysApply: false
+---
+# Frontend Guidelines
+- Use functional React components (no class components).
+- Use React Native's built-in styling system consistently (e.g., `StyleSheet.create`):
+  - Avoid inline styles; define styles in `StyleSheet.create` for performance and maintainability.
+  - Use utility functions or constants for reusable style values (e.g., colors, spacing).
+- Components should have clear, descriptive naming, following React Native conventions (e.g., `HabitCard`, `CategoryList`).
+- Maintain a consistent and clear component structure:
+  - Break complex UI into smaller, reusable components.
+  - Use composition over inheritance for component hierarchies.
+  - Keep component logic clean by extracting business logic into custom hooks.
+- Use React Navigation for navigation between screens, following best practices:
+  - Define route types in TypeScript for type-safe navigation.
+  - Use descriptive route names (e.g., `Dashboard`, `HabitCreation`).
+- Ensure UI is responsive and mobile-first:
+  - Use `Dimensions` or libraries like `react-native-responsive-screen` for adaptive layouts.
+  - Test on multiple screen sizes (e.g., small phones, tablets).
+- Handle UI state changes efficiently:
+  - Use state management solutions like Redux, Zustand, or React Context for complex state.
+  - Avoid unnecessary re-renders by using `React.memo` and `useMemo`/`useCallback`.
+- Ensure accessibility by using ARIA labels (e.g., `accessibilityLabel`) and testing with screen readers.

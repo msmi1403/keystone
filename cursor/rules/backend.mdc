@@ -1,0 +1,20 @@
+---
+description: Backend Coding Standards
+globs: src/services/*.ts
+alwaysApply: false
+---
+# Backend Guidelines
+- Always validate API inputs at API endpoints or before performing database operations.
+- Use async/await consistently for all asynchronous operations (no callback patterns).
+- If implementing custom APIs, follow RESTful conventions for route design (e.g., `/users/{id}/habits` for user-specific habits).
+- Optimize Firebase queries for performance and scalability:
+  - Use indexed fields for frequently queried data.
+  - Avoid unnecessary reads by batching operations where possible.
+  - Use `where` clauses and `limit` to reduce data retrieval.
+- Log errors properly but avoid excessive debugging logs in production:
+  - Use `console.debug` or a logging library (e.g., `react-native-logs`) for development logs, wrapped in environment checks (e.g., `__DEV__`).
+  - Implement structured error logging for production (e.g., Firebase Crashlytics).
+- Use Firebase SDK best practices:
+  - Ensure Firestore security rules are configured to enforce data separation (e.g., user-specific data access).
+  - Handle Firebase exceptions (e.g., `FirebaseError`) and provide meaningful error messages to the frontend.
+- Use dependency injection or service modules to keep services modular and testable.
